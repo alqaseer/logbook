@@ -1,0 +1,164 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #390d57;
+}
+
+.patientnamedetail {
+    font-family: 'Raleway', sans-serif;
+}
+
+.mynav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: right;
+
+}
+.topcontainer {
+    background-color: #7b398f;
+
+}
+
+.transparentbar {
+    min-height: 120px;
+    background-image: url('../img/upeersmallbarback.png');
+    background-size: cover;
+
+}
+
+.logobox {
+    height: 120;
+}
+
+.logo {
+
+    vertical-align: middle;
+}
+
+.align {
+    vertical-align: middle;
+    padding-top: 20px;
+}
+
+.searchbar {
+    height: 30px;
+    background-color: #390d57;
+}
+
+.content {
+    background-color: #e8e8e8;
+    padding-bottom: 20px;
+}
+
+.myfooter {
+    
+    background-color: #390d57;
+    color: #704578;
+    padding-top: 15px;
+}
+
+.caselist{
+    margin: 5px 0px 5px 0px ;
+    height: 100px;
+    background-color: white;
+}
+
+.patientnameinlist {
+    margin-left: 5px;
+    margin-top: 0px;
+    color: #704578;
+}
+
+.topline{
+    color: #704578;
+}
+
+.listdetails {
+    margin-left: 5px;
+}
+
+.truncate {
+  /*width: 250px;*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.searchbox {
+    margin-top: 20px;
+
+}
+
+.casedata {
+    background-color: white;
+    margin: 5px 0px 20px 0px;
+}
+
+.datakey {
+    color: #704578;
+}
+
+.updatebox {
+    background-color: white;
+    margin: 5px 0px 20px 0px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.updateimage {
+    margin: 5px 5px 5px 5px;
+}
+
+.updatedelete {
+    float: right;
+}
+
+.updatehead {
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #d8d8d8;
+    margin: 0px 0px 10px 0px;
+}
+
+.updatetext {
+    margin-bottom: 20px;
+    font-weight: bold;
+
+}
+
+.updateboxbody {
+    margin: 5px 0px 5px 5px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: #704578;
+
+}
+
+.nav-pills>li>a {
+    border-radius: 0px;
+}
+
+a {
+    color: #704578;
+}
+
+.nav>li>a {
+    color: white;
+}
+.nav>li>a:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.footerdjango {
+    max-width: 50px;
+}
+
+.caseupdtebutton {
+    margin-top: 10px;
+}
+
+.newcasebutton>a {
+    margin-top: 30px;
+    float: right;
+    color: white;
+    background-color: #704578;
+}

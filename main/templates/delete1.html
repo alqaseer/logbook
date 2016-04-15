@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>Are you sure you want to delete {{case.patient_name}}</h1>
+
+<a href='/delete2/{{case.pk}}'>Yes</a>  <a href='/case_detail/{{ case.pk }}'>NO!!</a>
+
+
+{% endblock %}

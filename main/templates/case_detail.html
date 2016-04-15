@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+{% if case.user == request.user %}
+
+<p class='caseupdtebutton'><a href='/create_update/{{ case.pk }}'> Create update </a>     |     <a href='/delete1/{{case.pk}}'>Delete the case</a></p>
+
+<div class='row casedata'>
+	<div class='col-lg-12'>
+		<h1 class='patientnamedetail'>{{ case.patient_name }}</h1>
+	</div>
+	<div class='col-lg-4'>
+		<p><span class='datakey'>Diagnosis: </span><b>{{ case.diagnosis }}</b></p>
+		<p><span class='datakey'>Date of Birth: </span><b>{{case.date_of_birth}}</b></p>
+		<p><span class='datakey'>File Number: </span><b>{{ case.file_number }}</b></p>
+		<p><span class='datakey'>Civid Id: </span><b>{{ case.civil_id }}</b></p>
+	</div>
+
+	<div class='col-lg-8'>
+		<p><span class='datakey'>History and Physical exam:</span></p>
+		<p>{{ case.history_and_exam }}</p>
+	</div>
+
+
+
+
+
+</div>
+{% for update in case.update_set.all %}
+<div class='row updatebox'>
+	<div class="row updatehead">
+		<div class='col-xs-6'>
+		{{ update.date }}
+		</div>
+
+		<div class='col-xs-6'>
+		<a href='/deleteupdate1/{{ update.pk }}'><span class='updatedelete'>DELETE</span></a>
+		</div>
+	</div>
+	<div class='row updateboxbody'>
+		<div class='col-xs-12 updatetext'>
+			{{ update.text}}
+		</div>
+
+		{% for photo in update.photo_set.all %}
+		{% if photo.image %}
+
+		<div class='col-xs-12'>
+			<img class='img-responsive' src='{{ photo.image.url }}'>
+		</div>
+
+		{% endif %}
+		<br>
+		{% if photo.image_text %}
+		<div class='col-xs-12'>Figure: {{ photo.image_text }}</div>
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>
+{% endfor %}
+
+{% endif %}
+
+{% endblock %}

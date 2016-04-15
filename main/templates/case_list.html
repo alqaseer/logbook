@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class='row'>
+	<div class='col-sm-3'><h2 class='patientnamedetail'>My Cases</h2></div>
+
+	<div class='col-sm-5'><p class='newcasebutton'><a href='/create_case/'>| New Case |</a></p></div>
+
+	<div class='col-sm-4 searchbox'> 
+		
+		<form>
+		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Search">
+		</form>
+	</div>
+</div>
+
+<div class='row'>
+{% for case in cases %}
+	<div class='col-lg-4'>
+		<div class='caselist'>
+			<a href='/case_detail/{{ case.pk }}'><h2 class='patientnameinlist truncate'>{{ case.patient_name }}</h2></a>
+			<p class='listdetails'>Diagnosis: <b>{{ case.diagnosis }}</b></p>
+			<p class='listdetails'>D.O.B. :<b>{{ case.date_of_birth }}</b></p>
+
+		</div>
+	</div>
+{% endfor %}
+</div>
+
+{% endblock %}
